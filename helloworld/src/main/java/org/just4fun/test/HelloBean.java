@@ -1,5 +1,10 @@
 package org.just4fun.test;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@ManagedBean(name="helloBean")
+@SessionScoped
 public class HelloBean {
 	
 	private String name;
