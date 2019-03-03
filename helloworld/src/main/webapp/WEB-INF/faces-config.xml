@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
-        version="2.2">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+	<managed-bean>
+		<managed-bean-name>helloBean</managed-bean-name>
+		<managed-bean-class>org.just4fun.test.HelloBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
     <managed-bean>
-        <managed-bean-name>helloBean</managed-bean-name>
-        <managed-bean-class>org.just4fun.test.HelloBean</managed-bean-class>
+        <managed-bean-name>helloWorld</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.HelloWorld</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
+        <managed-property>
+            <property-name>messageBean</property-name>
+            <property-class>org.just4fun.test.MessageBean</property-class>
+            <value>#{message}</value>
+        </managed-property>
     </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>navigationController</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.NavigationController</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+        <managed-property>
+            <property-name>pageId</property-name>
+            <property-class>java.lang.String</property-class>
+            <value>#{param.pageId}</value>
+        </managed-property>
+    </managed-bean>
+
+    <navigation-rule>
+      <from-view-id>navigation.xhtml</from-view-id>
+      <navigation-case>
+         <from-action>#{navigationController.processPage1}</from-action>
+         <from-outcome>page</from-outcome>
+         <to-view-id>page1.jsf</to-view-id>
+      </navigation-case>
+      <navigation-case>
+         <from-action>#{navigationController.processPage2}</from-action>
+         <from-outcome>page</from-outcome>
+         <to-view-id>page2.jsf</to-view-id>
+      </navigation-case>
+   </navigation-rule>
+
 </faces-config>
