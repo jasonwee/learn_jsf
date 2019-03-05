@@ -10,6 +10,18 @@
 	</managed-bean>
 
     <managed-bean>
+        <managed-bean-name>userDatas</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.UserDatas</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>userData</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.UserData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
         <managed-bean-name>helloWorld</managed-bean-name>
         <managed-bean-class>org.just4fun.test.HelloWorld</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
