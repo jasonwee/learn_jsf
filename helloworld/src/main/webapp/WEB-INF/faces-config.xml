@@ -22,6 +22,24 @@
     </managed-bean>
 
     <managed-bean>
+        <managed-bean-name>paramData</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.ParamData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>attributeData</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.AttributeData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>propertyData</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.PropertyData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+        
+    <managed-bean>
         <managed-bean-name>helloWorld</managed-bean-name>
         <managed-bean-class>org.just4fun.test.HelloWorld</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
