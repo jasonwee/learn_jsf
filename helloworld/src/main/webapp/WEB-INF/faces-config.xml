@@ -38,7 +38,24 @@
         <managed-bean-class>org.just4fun.test.PropertyData</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
-        
+
+    <managed-bean>
+        <managed-bean-name>dateTime</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.DateTime</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>userUrlData</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.UserUrlData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <converter>
+    <converter-id>urlConverter</converter-id>
+    <converter-class>org.just4fun.test.UrlConverter</converter-class>
+    </converter>
+
     <managed-bean>
         <managed-bean-name>helloWorld</managed-bean-name>
         <managed-bean-class>org.just4fun.test.HelloWorld</managed-bean-class>
