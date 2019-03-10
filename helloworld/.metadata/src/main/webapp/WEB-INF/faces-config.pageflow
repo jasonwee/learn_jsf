@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15522078193611" configfile="/helloworld/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="navigation.xhtml" x="122" y="370" id="pf15522080593712" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15522080593713 pf15522080593714" path="navigation.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page1.jsf" x="338" y="192" id="pf15522080593715" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf15522080593713" path="page1.jsf"/>
+  <nodes xsi:type="pageflow:PFPage" name="page2.jsf" x="338" y="562" id="pf15522080593716" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf15522080593714" path="page2.jsf"/>
+  <nodes xsi:type="pageflow:PFPage" name="login/loginView.xhtml" x="420" y="336" id="pf15522136598027" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf15522136598028 pf15522136598029" path="/login/loginView.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="login/Trainer.xhtml" x="576" y="156" id="pf155221365980210" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf15522136598028" path="/login/Trainer.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="login/FailedLogin.xhtml" x="576" y="504" id="pf155221365980211" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf15522136598029" path="/login/FailedLogin.xhtml"/>
+  <links id="pf15522080593713" target="pf15522080593715" source="pf15522080593712" outcome="page" fromaction="#{navigationController.processPage1}"/>
+  <links id="pf15522080593714" target="pf15522080593716" source="pf15522080593712" outcome="page" fromaction="#{navigationController.processPage2}"/>
+  <links id="pf15522136598028" target="pf155221365980210" source="pf15522136598027" outcome="success"/>
+  <links id="pf15522136598029" target="pf155221365980211" source="pf15522136598027" outcome="failed"/>
+</pageflow:Pageflow>
