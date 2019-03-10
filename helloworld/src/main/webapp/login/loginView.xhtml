@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml"
+   xmlns:f = "http://java.sun.com/jsf/core"    
+   xmlns:h = "http://java.sun.com/jsf/html">
+   
+<head>
+<title>Login</title>
+</head>
+
+<body>
+    <f:loadBundle basename="org.just4fun.messages" var="msg" />
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputLabel value="#{msg.user}"></h:outputLabel>
+            <h:inputText value="#{user.name}">
+            <f:validator
+                    validatorId="loginValidator" />
+            </h:inputText>
+            <h:outputLabel value="#{msg.password}"></h:outputLabel>
+            <h:inputSecret value="#{user.password}">
+            </h:inputSecret>
+        </h:panelGrid>
+        <h:commandButton action="#{user.login}" value="#{msg.login}"></h:commandButton>
+        <h:messages layout="table"></h:messages>
+    </h:form>
+</body>
+</html>

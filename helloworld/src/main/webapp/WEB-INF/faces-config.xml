@@ -120,6 +120,10 @@
     <validator-id>urlValidator</validator-id>
     <validator-class>org.just4fun.test.UrlValidator</validator-class>
     </validator>
+    <validator>
+    	<validator-id>loginValidator</validator-id>
+    	<validator-class>org.just4fun.validator.LoginValidator</validator-class>
+    </validator>
 
     <managed-bean>
         <managed-bean-name>helloWorld</managed-bean-name>
@@ -142,6 +146,47 @@
             <value>#{param.pageId}</value>
         </managed-property>
     </managed-bean>
+    
+    <managed-bean>
+    	<managed-bean-name>temperatureConvertor</managed-bean-name>
+    	<managed-bean-class>org.just4fun.model.TemperatureConvertor</managed-bean-class>
+    	<managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+    	<managed-bean-name>user</managed-bean-name>
+    	<managed-bean-class>org.just4fun.model.User</managed-bean-class>
+    	<managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+    	<managed-bean-name>card</managed-bean-name>
+    	<managed-bean-class>org.just4fun.model.Card</managed-bean-class>
+    	<managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>card1</managed-bean-name>
+        <managed-bean-class>org.just4fun.model.Card1</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+    	<managed-bean-name>cardController</managed-bean-name>
+    	<managed-bean-class>org.just4fun.controller.CardController</managed-bean-class>
+    	<managed-bean-scope>session</managed-bean-scope>
+    	<managed-property>
+    		<property-name>card1</property-name>
+    		<property-class>org.just4fun.model.Card1</property-class>
+    		<value>#{card1}</value>
+    	</managed-property>
+    </managed-bean>
+    <managed-bean>
+    	<managed-bean-name>todoController</managed-bean-name>
+    	<managed-bean-class>org.just4fun.controller.TodoController</managed-bean-class>
+    	<managed-bean-scope>session</managed-bean-scope>
+    	<managed-property>
+    		<property-name>todo</property-name>
+    		<property-class>org.just4fun.model.Todo</property-class>
+    		<value>#{todo}</value>
+    	</managed-property>
+    </managed-bean>
 
     <navigation-rule>
       <from-view-id>navigation.xhtml</from-view-id>
@@ -156,6 +201,22 @@
          <to-view-id>page2.jsf</to-view-id>
       </navigation-case>
    </navigation-rule>
+    <navigation-rule>
+    	<display-name>login/loginView.xhtml</display-name>
+    	<from-view-id>/login/loginView.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>success</from-outcome>
+    		<to-view-id>/login/Trainer.xhtml</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+    	<display-name>login/loginView.xhtml</display-name>
+    	<from-view-id>/login/loginView.xhtml</from-view-id>
+    	<navigation-case>
+    		<from-outcome>failed</from-outcome>
+    		<to-view-id>/login/FailedLogin.xhtml</to-view-id>
+    	</navigation-case>
+    </navigation-rule>
    
    <application>
    
