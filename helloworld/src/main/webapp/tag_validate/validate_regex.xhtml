@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml"   
+   xmlns:h = "http://java.sun.com/jsf/html"
+   xmlns:f = "http://java.sun.com/jsf/core">
+   
+   <h:head>
+      <title>JSF tutorial</title>           
+   </h:head>
+   
+   <h:body>    
+      <h2>h:validateRegex Example</h2>
+      https://www.tutorialspoint.com/jsf/jsf_validateregex_tag.htm
+      <!-- password contains lower case letters only and.
+      length of the password should be greater than 6. -->
+      
+      <h:form>
+         <h:inputSecret id = "passwordInput" value = "#{userNameData.password}" 
+            label = "password" >
+            <f:validateRegex pattern = "((? = .*[a-z]).{6,})" />
+         </h:inputSecret>           
+         <h:commandButton value = "submit" action = "validate_regex_result"/>
+         <h:message for = "passwordInput" style = "color:red" />
+      </h:form>
+   
+   </h:body>
+</html>

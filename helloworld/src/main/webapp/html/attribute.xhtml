@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html xmlns = "http://www.w3.org/1999/xhtml"
+   xmlns:f = "http://java.sun.com/jsf/core"    
+   xmlns:h = "http://java.sun.com/jsf/html">
+   <head> 
+      <title>JSF Tutorial!</title> 
+   </head> 
+   
+   <body> 
+      <h2>f:attribute example</h2>
+      https://www.tutorialspoint.com/jsf/jsf_attribute_tag.htm 
+      <hr /> 
+      
+      <h:form> 
+         <h:commandButton id = "submit"  
+            actionListener = "#{attributeData.attributeListener}" action = "attribute_result">  
+            <f:attribute name = "value" value = "Show Message" /> 
+            <f:attribute name = "username" value = "JSF 2.0 User" /> 
+         </h:commandButton> 
+      </h:form> 
+   
+   </body> 
+</html> 

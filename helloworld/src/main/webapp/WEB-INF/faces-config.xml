@@ -51,10 +51,75 @@
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
 
+    <managed-bean>
+        <managed-bean-name>userNameData</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.UserNameData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>employeeData</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.EmployeeData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>employeeAData</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.EmployeeAData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>compositeComponent</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.CompositeComponent</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>userHandlerData</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.UserHandlerData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>userActionData</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.UserActionData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>userSystemEventData</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.UserSystemEventData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>userDatabaseData</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.UserDatabaseData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>userExpLangData</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.UserExpLangData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>userLangData</managed-bean-name>
+        <managed-bean-class>org.just4fun.test.UserLangData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
     <converter>
     <converter-id>urlConverter</converter-id>
     <converter-class>org.just4fun.test.UrlConverter</converter-class>
     </converter>
+    
+    <validator>
+    <validator-id>urlValidator</validator-id>
+    <validator-class>org.just4fun.test.UrlValidator</validator-class>
+    </validator>
 
     <managed-bean>
         <managed-bean-name>helloWorld</managed-bean-name>
@@ -91,5 +156,37 @@
          <to-view-id>page2.jsf</to-view-id>
       </navigation-case>
    </navigation-rule>
-
+   
+   <application>
+   
+   <locale-config>
+      <default-locale>en</default-locale>
+      <supported-locale>fr</supported-locale>
+   </locale-config>
+   
+   <resource-bundle>
+      <base-name>org.just4fun.messages</base-name>
+      <var>msg</var>
+   </resource-bundle>
+   
+         <!-- Application Startup -->
+      <system-event-listener>
+         <system-event-listener-class>
+            org.just4fun.test.CustomSystemEventListener
+         </system-event-listener-class>
+         <system-event-class>
+            javax.faces.event.PostConstructApplicationEvent
+         </system-event-class>                      
+      </system-event-listener> 
+      
+      <!-- Before Application is to shut down -->
+      <system-event-listener>
+         <system-event-listener-class>
+            org.just4fun.test.CustomSystemEventListener
+         </system-event-listener-class>
+         <system-event-class>
+            javax.faces.event.PreDestroyApplicationEvent
+         </system-event-class>                      
+      </system-event-listener>
+   </application>
 </faces-config>
