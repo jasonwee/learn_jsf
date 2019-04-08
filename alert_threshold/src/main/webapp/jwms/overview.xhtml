@@ -1,11 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"   
+<!DOCTYPE html>
+<html
+      lang="en" 
+      xmlns="http://www.w3.org/1999/xhtml"   
       xmlns:h="http://java.sun.com/jsf/html">
- 
+    <h:head>
+          <h:outputStylesheet library="css" name="style.css" />
+          
+          <h:outputScript library="js" name="common.js" target="head" />
+    </h:head>
     <h:body>
-    	<h1>JSF 2 textbox example</h1>
+    	<h1>overview page</h1>
+         
+        <div class="red">This is red color</div>
+
+        <ol>
+                <li>Normal way - <h:graphicImage value="/resources/images/jwms.png" /></li>
+                <li>Library way - <h:graphicImage library="images" name="jwms.png" /></li>
+        </ol>
  
 		Submitted value : <h:outputText value="#{loginBean.userName}" />
 		Submitted value : <h:outputText value="#{loginBean.password}" />
