@@ -1,0 +1,1 @@
+document.write('im a javascript writer');
