@@ -32,3 +32,10 @@ Pass-through Attributes Tag Library	http://xmlns.jcp.org/jsf/passthrough	p:	p:ty
 Composite Component Tag Library		http://xmlns.jcp.org/jsf/composite	cc:	cc:interface				Tags to support composite components
 JSTL Core Tag Library			http://xmlns.jcp.org/jsp/jstl/core	c:	c:forEach c:catch			JSTL 1.2 Core Tags
 JSTL Functions Tag Library		http://xmlns.jcp.org/jsp/jstl/functions	fn:	fn:toUpperCase fn:toLowerCase		JSTL 1.2 Functions Tags
+
+
+Test
+------
+https://blogs.oracle.com/javamagazine/testing-html-and-jsf-based-uis-with-arquillian
+https://github.com/juneau001/ArquillianExampleUI
+https://bitbucket.org/javamagazine/magdownloads/wiki/2019%20Articles
